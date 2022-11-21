@@ -1,16 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+// import { nativeViewGestureHandlerProps } from 'react-native-gesture-handler/lib/typescript/handlers/NativeViewGestureHandler';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Provider } from 'react-redux';
 import HomeScreen from './screens/HomeScreen';
 import { store } from './store';
+import 'react-native-gesture-handler';
 
 //Set up REDUX
 
 export default function App() {
   return (
     <Provider store={store}>
-
-    <HomeScreen/>
+      
+      <SafeAreaProvider>
+        <HomeScreen/>
+      </SafeAreaProvider>
 
     </Provider>
   );
