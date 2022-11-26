@@ -1,5 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+
+import { StyleSheet } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Provider } from 'react-redux';
 import HomeScreen from './screens/HomeScreen';
@@ -18,6 +18,8 @@ export default function App() {
     <Provider store={store}>
       <NavigationContainer>
       <SafeAreaProvider>
+          
+
         <Stack.Navigator>
           <Stack.Screen name="HomeScreen" component={HomeScreen}
           options={{
@@ -28,6 +30,7 @@ export default function App() {
             headerShown: false,
           }}/>
         </Stack.Navigator>
+          
       </SafeAreaProvider>
       </NavigationContainer>
 

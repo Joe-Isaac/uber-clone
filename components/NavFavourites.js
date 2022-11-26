@@ -16,15 +16,21 @@ const NavFavourites = () => {
             location: 'Work',
             destination: 'Parklands, Kenya'
         },
+        {
+            id: '789',
+            icon: 'medkit',
+            location: 'Hospital',
+            destination: 'Kiambu, Kenya'
+        },
     ]
 
   return (
     <FlatList
     data={data}
     keyExtractor={item => item.id}
-    ItemSeparatorComponent={()=>{
-        <View></View>
-    }}
+    ItemSeparatorComponent={()=>(
+        <View style={[tw`bg-gray-200`, {height : 0.5}]}/>
+  )}
     renderItem={({item: {location, destination, icon}})=> (
         <TouchableOpacity
         style={
